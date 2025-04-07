@@ -4,7 +4,7 @@ export default function Register() {
   const { data, setData, post, processing, errors } = useForm({
     email: '',
     password: '',
-    password_confirmation: '',
+    password_confirmation: ''
   })
 
   const handleSubmit = (e) => {

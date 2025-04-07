@@ -1,3 +1,9 @@
+import axios from 'axios'
+
+document.addEventListener('DOMContentLoaded', () => {
+    const csrfToken = document.querySelector('meta[name=csrf-token').getAttribute('content')
+    axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
+})
 // To see this message, add the following to the `<head>` section in your
 // views/layouts/application.html.erb
 //
