@@ -4,6 +4,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def create
+    build_resource(sign_up_params)
+
     if resource.save
       sign_in(resource_name, resource)
       redirect_to root_path
